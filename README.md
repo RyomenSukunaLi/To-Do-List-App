@@ -28,14 +28,6 @@ CSS Modules for scoped styling
 
 Browser localStorage for data persistence
 
-📂 Project Structure
-src/
-│── components/
-│   ├── ToDoList.jsx
-│   └── todo.module.css
-│
-└── App.jsx
-
 <h1>⚙️ How It Works</h1>
 
 <h3>State Management</h3>
