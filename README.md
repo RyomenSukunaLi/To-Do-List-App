@@ -1,16 +1,112 @@
-# React + Vite
+<h1>📝 My To-Do List App</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and interactive To-Do List application built with React. This app allows users to add, edit, delete, reorder, and persist tasks using the browser's localStorage.
 
-Currently, two official plugins are available:
+🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+➕ Add Tasks using the input field or Enter key
 
-## React Compiler
+✏️ Edit Tasks by double-clicking on a task
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+❌ Delete Individual Tasks
 
-## Expanding the ESLint configuration
+🔼🔽 Reorder Tasks (move up or down)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🔄 Clear All Tasks with one click
+
+💾 Persistent Storage using localStorage
+
+⌨️ Keyboard Friendly (Enter key support)
+
+🛠️ Built With
+
+React (Functional Components)
+
+React Hooks (useState, useEffect)
+
+CSS Modules for scoped styling
+
+Browser localStorage for data persistence
+
+📂 Project Structure
+src/
+│── components/
+│   ├── ToDoList.jsx
+│   └── todo.module.css
+│
+└── App.jsx
+⚙️ How It Works
+State Management
+
+tasks: Stores the list of tasks
+
+inputValue: Stores the current input value
+
+Persistence
+
+Tasks are saved to localStorage whenever the task list changes
+
+On initial load, tasks are fetched from localStorage
+
+Editing Tasks
+
+Double-click on a task to make it editable
+
+Press Enter to save the edited task
+
+Empty edits are ignored
+
+🧩 Installation & Setup
+
+Clone the repository:
+
+git clone https://github.com/your-username/todo-list-react.git
+
+Navigate to the project folder:
+
+cd todo-list-react
+
+Install dependencies:
+
+npm install
+
+Run the development server:
+
+npm run dev
+🧪 Usage
+
+Type a task in the input field
+
+Press Enter or click the ✏️ button to add it
+
+Double-click a task to edit
+
+Use 🔼 or 🔽 to reorder
+
+Click ❌ to delete a task
+
+Click 🔄 to clear all tasks
+
+📌 Notes
+
+Tasks are stored locally in the browser, so clearing browser data will remove them
+
+Uses array index as key (acceptable for this small app, but not recommended for large-scale apps)
+
+📈 Future Improvements
+
+Add task completion (checkbox)
+
+Add timestamps
+
+Add drag-and-drop reordering
+
+Add categories or priorities
+
+👤 Author
+
+Created by Awais Jutt
+
+📄 License
+
+This project is open-source and free to use for learning and personal projects.
