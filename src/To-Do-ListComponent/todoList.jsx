@@ -10,8 +10,8 @@ function ToDoList() {
 
     let handleAddTasks = () => {
         if(inputValue.trim() === "") return;
-        setTasks(t => [...t, inputValue])
-        setInputValue("")
+        setTasks(t => [...t, inputValue]);
+        setInputValue("");
     }
     useEffect(
         () => {
@@ -38,8 +38,8 @@ function ToDoList() {
         })
     }
     let handleMoveTasksDown = (index) => {
+        if(index + 1 === tasks.length) return;
         setTasks(prevTasks => {
-            if(index + 1 === prevTasks.length) return prevTasks;
             const newTasks = [...prevTasks];
             [newTasks[index + 1], newTasks[index]] = [newTasks[index], newTasks[index + 1]];
             return newTasks;
@@ -54,8 +54,12 @@ function ToDoList() {
             e.preventDefault();
             e.target.contentEditable = false;
             const updatedTask = e.target.textContent.trim();
+            if(updatedTask === ""){
+                e.target.blur();
+                return handleRemoveTasks(index);
+            } 
+                
         setTasks(prevTasks => {
-            if(updatedTask === "") return prevTasks;
             const newTasks = [...prevTasks]
             newTasks[index] = updatedTask;
             return newTasks;
