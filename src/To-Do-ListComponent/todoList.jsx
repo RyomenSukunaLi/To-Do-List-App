@@ -66,8 +66,8 @@ function ToDoList() {
     <>
     <div className={styles.container}>
         <h1>📝 My To-Do List</h1>
-        <div className={styles.tasks_setup}>
-            <div className={styles.tasksAddUp}>
+        <div className={styles.toDoMainContent}>
+            <div className={styles.inputContainer}>
                 <div className={styles.inputWrapper}>
                     <input type="text" 
                     name="tasks" 
@@ -81,9 +81,9 @@ function ToDoList() {
             <div className={styles.clearAll}>
                 <button onClick={handleClearAllTasks}>🔄</button>
             </div>
-            <div className={styles.tasks_display}>
+            <div className={styles.toDoList}>
                         {tasks.map((task, index) => (
-                        <div key={index} className={styles.tasks}>
+                        <div key={index} className={styles.toDoItem}>
                             <p 
                                onDoubleClick={handleEdit}
                                onKeyDown={(e) => handleKeyDownEditable(e, index)}

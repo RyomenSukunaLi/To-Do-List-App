@@ -10,19 +10,19 @@ h1{
     font-size: 50px;
     font-weight: bold;
 }
-.tasks_setup{
+.toDoMainContent{
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-top: 40px;
 }
 
-.tasksAddUp{
+.inputContainer{
     display: flex;
     width: 100%;
 }
 
-.tasksAddUp input{
+.inputContainer input{
     border: none;
     padding: 8px 5px;
     width: 100%;
@@ -48,7 +48,7 @@ h1{
 .inputWrapper:focus-within::after{
     transform: scaleX(1);
 }
-.tasksAddUp button{
+.inputContainer button{
     border: none;
     border-radius: 0px 3px 3px 0px;
     background-color: rgb(17, 218, 17);
@@ -56,7 +56,7 @@ h1{
     transition: all 1s ease;
     padding: 7px;
 }
-.tasksAddUp button:hover{
+.inputContainer button:hover{
     background-color: rgb(4, 179, 65);
 }
 .clearAll{
@@ -70,7 +70,7 @@ h1{
     font-size: 1.2rem;
     cursor: pointer;
 }
-.tasks_display{
+.toDoList{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -78,7 +78,7 @@ h1{
     
 }
 
-.tasks{
+.toDoItem{
     background-color: rgb(5, 197, 120);
     border-radius: 5px;
     padding: 10px 5px;
@@ -86,11 +86,11 @@ h1{
     justify-content: space-between;
     align-items: center;
 }
-.tasks p{
+.toDoItem p{
     font-size: 1.2rem;
     font-weight: bold;
 }
-.tasks button{
+.toDoItem button{
     background: none;
     border: none;
     cursor: pointer;
